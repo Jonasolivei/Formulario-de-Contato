@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Contato</title>
+    <h1><center>Formulário de Contato</center></h1>
+    
+    <style>
+        form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      max-width: 500px;
+    }</style>
+    
+</head>
+<body>
+    <script>
+            function exibirDados() {
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let message = document.getElementById("message").value;
+
+  alert(`Nome: ${name}\nEmail: ${email}\nMensagem: ${message}`);
+}
+    </script>
+    <form>
+  <label for="name">Nome:</label>
+  <input type="text" id="name" name="name" required>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="message">Mensagem:</label>
+  <textarea id="message" name="message" required></textarea>
+
+  <button type="submit" onclick="exibirDados()">Enviar</button>
+</form>
+
+</body>
+</html>
